@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Project>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Project code</th>
+                    <th>Location</th>
+                    <th>Project Type</th>
+                    <th>Last Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var project in Model)
+                {
+                    <tr>
+                        <td>@project.ProjectName</td>
+                        <td>@project.ProjectCode</td>
+                        <td>@project.Location</td>
+                        <td>@project.ProjectType</td>
+                        <td>@project.LastDate</td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Designation</th>
+                    <th>Skill set</th>
+                    <th>Experience in Months</th>
+                    <th>No of Candidates</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var project in Model)
+                {
+                    <tr>
+                        <td>@project.resource.SNo</td>
+                        <td>@project.resource.Designation</td>
+                        <td>@project.resource.SkillSet</td>
+                        <td>@project.resource.ExperienceInMonths</td>
+                        <td>@project.resource.NoOfCandidates</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
